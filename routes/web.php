@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ListController;
 use App\Http\Controllers\InfoController;
+use App\Http\Controllers\PersonalInfoController;
 
 
 /*
@@ -30,6 +31,7 @@ Route::post('/patientlist', [ListController::class, 'searchquery'])->name('mekle
 
 Route::get('/patientinfo', [InfoController::class, 'getPatientInfo'])->name('pacientainfo');
 
+Route::get('/personal-info', [PersonalInfoController::class, 'showPersonalInfo'])->name('personal.info');
 
 Route::get('/overview', [OverviewController::class, 'index'])->name('home');
 
